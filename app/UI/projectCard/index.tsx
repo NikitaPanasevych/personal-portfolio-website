@@ -4,7 +4,7 @@ import { ProjectCardProps } from './projectCard.props';
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function ProjectCard({ title, description, image, link }: ProjectCardProps) {
+export default function ProjectCard({ title, image, link }: ProjectCardProps) {
    const router = useRouter();
 
    const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
