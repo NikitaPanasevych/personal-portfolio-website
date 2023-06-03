@@ -8,7 +8,7 @@ $background-color-secondary: #72757e;
 $shadow-1: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
 $mobile: 600px;
-$tablet: 768px;
+$tablet: 935px;
 $desktop: 1024px;
 $large: 1200px;
 
@@ -105,5 +105,8 @@ $container-width: 900px;
     "contact"
     ;
     overflow-x: hidden;
+    @media screen and (max-width: $tablet){
+      grid-template-rows: 1fr auto auto auto;
+    }
 }
 
