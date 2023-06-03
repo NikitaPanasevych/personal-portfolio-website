@@ -1,0 +1,53 @@
+.home{
+    background-color: $background-color;
+    grid-area: home;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    &__container{
+        height: $container-height;
+        width: $container-width;
+        background-image: url(../../../public/ColoredPatterns.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &__paragraph{
+            color: $paragraph;
+            margin-top: 0.5rem;
+            font-size: 2rem;
+            transition: all 0.3s ease-in-out;
+            :hover{
+                color: $secondary-color;
+            }
+        } 
+    }
+    &__title{
+        font-size: 3rem;
+        color: $headline;
+        transition: all 0.3s ease-in-out;   
+        strong{
+            color: $secondary-color;
+        }
+    }
+
+    .button{
+        height: 75px;
+        width: 300px;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        color: $secondary-color !important;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        background-color: $background-color;
+        color: $background-color;
+        font-size: 1.5rem;
+        transition: all 0.3s ease-in-out;
+    }
+    .button:hover{
+        scale: 1.1;
+        background-color: $secondary-color;
+        color: $background-color !important;
+        cursor: pointer;
+    }
+}
+

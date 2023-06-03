@@ -1,0 +1,27 @@
+.about{
+    grid-area: about;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url(../../../public/WaveLine.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    h2{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: $headline;
+        text-align: center;
+    }
+    &__container{
+        height: $container-height;
+        width: $container-width;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+}
+}
+
+//media queries

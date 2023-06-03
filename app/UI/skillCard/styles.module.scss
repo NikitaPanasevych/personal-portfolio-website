@@ -1,0 +1,38 @@
+.card{
+    display: grid;
+    border: 1px solid $headline;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    gap: 0.25rem;
+    justify-items: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    h3{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: $headline;
+    }
+    &__icon{
+        height: 75px;
+        width: 75px;
+        margin-bottom: 0.5rem;
+        svg{
+            height: 100%;
+            width: 100%;
+            fill: $headline;
+            stroke: $background-color;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: $secondary-color;
+        &__icon{
+            svg{
+                fill: $background-color;
+                stroke: $headline;
+            }
+        }
+    }
+}
