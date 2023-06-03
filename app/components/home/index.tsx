@@ -1,7 +1,15 @@
 import styles from './styles.module.scss';
 import { motion } from 'framer-motion';
 
-export default function HomeComponent() {
+export interface IHome {
+   handleClick(): void;
+}
+
+export default function HomeComponent(props: IHome) {
+   const handleClick = () => {
+      props.handleClick();
+   };
+
    return (
       <>
          <motion.div
@@ -24,7 +32,9 @@ export default function HomeComponent() {
                   <br />
                   always open for new challenges
                </p>
-               <button className={styles.button}>Contact me</button>
+               <button onClick={handleClick} className={styles.button}>
+                  Contact me
+               </button>
             </div>
          </motion.div>
       </>
