@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import { projectsData } from '@/app/data/projectsData';
 import ProjectCard from '@/app/UI/projectCard';
+import { motion } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -16,7 +17,12 @@ SwiperCore.use([Pagination, Navigation]);
 const Portfolio: React.FC = () => {
    return (
       <div className={styles.portfolio}>
-         <div className={styles.portfolio__container}>
+         <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+            className={styles.portfolio__container}
+         >
             <h2>Featured projects</h2>
             <p>
                Created as part of the learning process. The goal was not just to build web applications but to discover
@@ -36,7 +42,7 @@ const Portfolio: React.FC = () => {
                   </SwiperSlide>
                ))}
             </Swiper>
-         </div>
+         </motion.div>
       </div>
    );
 };

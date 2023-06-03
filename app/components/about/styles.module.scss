@@ -22,6 +22,27 @@
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 1rem;
 }
+    @media screen and (max-width: $tablet){
+        grid-area: about;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100vw;
+        &__container{
+            height: 100%;
+            width: 100vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+            color: $headline;
+            text-align: center;
+        }
+    }
 }
 
-//media queries

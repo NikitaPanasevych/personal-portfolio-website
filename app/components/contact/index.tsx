@@ -1,11 +1,16 @@
 import styles from './styles.module.scss';
 import { ContactForm } from './contactForm';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
    return (
       <div className={styles.contact}>
-         <div className={styles.contact__container}>
+         <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: 'easeIn', duration: 1 }}
+            className={styles.contact__container}
+         >
             <div className={styles.contact__header}>
                <h2>
                   Contact me through form or directly <strong>n.panasevyc@gmail.com</strong>
@@ -24,7 +29,7 @@ const Contact = () => {
                </div>
             </div>
             <ContactForm />
-         </div>
+         </motion.div>
       </div>
    );
 };

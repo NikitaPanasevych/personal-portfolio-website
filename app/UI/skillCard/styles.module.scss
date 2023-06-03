@@ -35,4 +35,28 @@
             }
         }
     }
+    @media screen and (max-width: $tablet){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 25vw;
+        h3{
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: $headline;
+        }
+        &__icon{
+            height: 60px;
+            width: 60px;
+            margin-bottom: 0.5rem;
+            svg{
+                height: 100%;
+                width: 100%;
+                fill: $headline;
+                stroke: $background-color;
+            }
+        }
+    }
 }

@@ -40,6 +40,51 @@
             height: 2rem;
         }
     }
+    @media screen and (max-width: $tablet){
+        height: 100vh;
+        grid-area: contact;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color;
+        color: $headline;
+        margin-bottom: 10%;
+        background-image: url(../../../public/ColoredShapes.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        strong{
+            color: $secondary-color;
+        }
+        &__container{
+            width: 100vw;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr;
+        }
+        &__header{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &__icons{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            img{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
 }
 
 .form{
@@ -66,20 +111,60 @@
             color: $paragraph;
         }
     }
+    .button{
+        font-size: 1.5rem;
+        width: 14em;
+        height: 3em;
+        background-color: $background-color;
+        color: $secondary-color;
+        border-color: $secondary-color;
+        cursor: pointer;
+        border-width: 0.1em;
+        transition: all 0.2s ease;
+    }
+    
+    .button:hover{
+        scale: 1.1;
+    }
+    @media screen and (max-width: $tablet){
+        width: 100%;
+        height: 100vw;
+        display: grid;
+        margin-top: 2rem;
+        padding: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.5fr 0.5fr 2fr 1fr;
+        gap: 2rem;
+        border: 1px solid $secondary-color;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: $background-color;
+        &__section{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .input {
+                width: 100%;
+                height: 100%;
+                color: $paragraph;
+            }
+        }
+        .button{
+            font-size: 1.5rem;
+            width: 14em;
+            height: 3em;
+            background-color: $background-color;
+            color: $secondary-color;
+            border-color: $secondary-color;
+            cursor: pointer;
+            border-width: 0.1em;
+            transition: all 0.2s ease;
+        }
+        
+        .button:hover{
+            scale: 1.1;
+        }
+    }
 }
 
-.button{
-    font-size: 1.5rem;
-    width: 14em;
-    height: 3em;
-    background-color: $background-color;
-    color: $secondary-color;
-    border-color: $secondary-color;
-    cursor: pointer;
-    border-width: 0.1em;
-    transition: all 0.2s ease;
-}
-
-.button:hover{
-    scale: 1.1;
-}

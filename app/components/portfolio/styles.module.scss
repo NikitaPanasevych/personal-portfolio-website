@@ -29,5 +29,18 @@
     height: $container-height;
     margin: auto;
     }
+    @media screen and (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100vw;
+      height: 100vh;
+      &__container {
+        margin: auto;
+        height: 50vh;
+        width: 100vw;
+      }
+    }
   }
   
