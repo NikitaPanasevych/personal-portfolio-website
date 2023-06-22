@@ -9,7 +9,7 @@ export default function ProjectCard({ title, image, link }: ProjectCardProps) {
 
    const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       e.preventDefault();
-      /*router.push(link);*/
+      router.push(link);
    };
 
    return (

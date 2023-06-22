@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function About() {
    return (
       <div className={styles.about}>
-         <h2 className={styles.about__title}>Technologies i use</h2>
+         <h2 className={styles.about__title}>Technologies I use</h2>
          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
